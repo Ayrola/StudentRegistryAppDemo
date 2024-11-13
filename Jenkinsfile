@@ -2,11 +2,11 @@ pipeline{
     agent any
 
     environment{
-        NODE_VERIONS = '18.x'
+        NODE_VERSIONS = '18.x'
     }
 
     tools{
-        nodejs "${NODE_VERIONS}"
+        nodejs "${NODE_VERSIONS}"
     }
 
     stages{
@@ -16,7 +16,7 @@ pipeline{
             }
         }
 
-        stage("Install dependeies"){
+        stage("Install dependencies"){
             steps{
                 script{
                     if(isUnix()){
